@@ -2,4 +2,4 @@
 # Importing the script below will make the 'ql' and 'qlf' available to you in LLDB.
 # IMPORTANT: Update the path to the script depending on where you decide place it.
 
-command script import ~/Library/lldbScripts/LLDB-QuickLook.py
+command script import ~/Library/lldbScripts/LLDBQuickLook.py

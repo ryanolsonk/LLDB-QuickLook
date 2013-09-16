@@ -154,6 +154,6 @@ def get_data_and_save(debugger, command):
 
 
 def __lldb_init_module(debugger, internal_dict):
-    debugger.HandleCommand('command script add --function quickLook.quick_look_command qlf')
-    debugger.HandleCommand('command script add --function quickLook.quick_look_lite_command ql')
+    debugger.HandleCommand('command script add --function LLDBQuickLook.quick_look_command qlf')
+    debugger.HandleCommand('command script add --function LLDBQuickLook.quick_look_lite_command ql')
 
