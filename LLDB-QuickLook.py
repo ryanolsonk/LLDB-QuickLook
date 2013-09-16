@@ -32,7 +32,7 @@ class DebuggerError(Exception):
 def quick_look_command(debugger, command, result, internal_dict):
     """
     Quick Look Full (qlf): A command to save arbitrary data from a debugging session 
-    to a tmp location & open in Finder and the full version of Quick Look
+    to a tmp location & open in Finder with the full version of Quick Look
     Invoke as
     (lldb) qlf <object>
     e.g.
