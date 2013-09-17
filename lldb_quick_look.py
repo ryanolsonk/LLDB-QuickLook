@@ -117,8 +117,8 @@ def get_data_and_save(debugger, command):
     options = lldb.SBExpressionOptions()
     options.SetIgnoreBreakpoints()
 
-    dataCommand = "(NSData *)[({0!s}) debugData]".format(command)
-    filenameCommand = "(NSString *)[({0!s}) debugFilename]".format(command)
+    dataCommand = "(NSData *)[({0!s}) quickLookDebugData]".format(command)
+    filenameCommand = "(NSString *)[({0!s}) quickLookDebugFilename]".format(command)
 
     
     if frame.IsValid():

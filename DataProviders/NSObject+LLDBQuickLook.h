@@ -34,11 +34,11 @@
 
 // The data returned by this method will be saved to a tmp file by the lldb commands 'ql' and 'qlf'.
 // The tmp file will then be opened with Quick Look.
-- (NSData *)debugData;
+- (NSData *)quickLookDebugData;
 
 // The filename returned by this method will be used for the tmp file.
 // Specifying a propper extension for the file helps Quick Look display the file
 // and choose an appropriate application to open the file.
-- (NSString *)debugFilename;
+- (NSString *)quickLookDebugFilename;
 
 @end

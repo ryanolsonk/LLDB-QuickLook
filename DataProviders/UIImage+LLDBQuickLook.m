@@ -31,14 +31,14 @@
 
 @implementation UIImage (LLDBQuickLook)
 
-- (NSData *)debugData
+- (NSData *)quickLookDebugData
 {
     return UIImagePNGRepresentation(self);
 }
 
-- (NSString *)debugFilename
+- (NSString *)quickLookDebugFilename
 {
-    return [[super debugFilename] stringByAppendingPathExtension:@"png"];
+    return [[super quickLookDebugFilename] stringByAppendingPathExtension:@"png"];
 }
 
 @end

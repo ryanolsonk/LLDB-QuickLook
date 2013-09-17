@@ -31,7 +31,7 @@
 
 @implementation UIView (LLDBQuickLook)
 
-- (NSData *)debugData
+- (NSData *)quickLookDebugData
 {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -41,9 +41,9 @@
     return UIImagePNGRepresentation(viewImage);
 }
 
-- (NSString *)debugFilename
+- (NSString *)quickLookDebugFilename
 {
-    NSString *filename = [super debugFilename];
+    NSString *filename = [super quickLookDebugFilename];
     return [filename stringByAppendingPathExtension:@"png"];
 }
 
