@@ -3,3 +3,4 @@
 # IMPORTANT: Update the path to the script depending on where you decide place it.
 
 command script import ~/Library/lldbScripts/lldb_quick_look.py
+command alias ql quicklook
