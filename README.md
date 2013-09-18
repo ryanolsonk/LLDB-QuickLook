@@ -12,17 +12,17 @@ LLDB-QuickLook is a debugger command to open images, views, and more using Quick
 
 The command is quite simple. It asks an object in your program for debug data, saves the data to a tmp file on your computer, and opens the file using Finder and Quick Look.
 
-# Getting Started #
+## Getting Started
 
 1. Clone the repository.
-2. Copy the `.lldbinit` file to you home directory (or append the lines to your existing `.lldbinit`).
-3. Update the path to `lldb_quick_look.py` in the `.lldbinit` file to match the script's location on your computer
-4. Add the `DataProviders` directory to your Xcode project
+2. Copy the `.lldbinit` file to your home directory (or append the lines to your existing `.lldbinit`).
+3. Update the path to `lldb_quick_look.py` in the `.lldbinit` file to match the script's location on your machine.
+4. Add the `DataProviders` directory to your Xcode project.
 5. To use the full version of quick look, ensure that "Enable access for assistive devices" setting is checked in System Preferences.
 
 ![Enable access for assistive devices](http://f.cl.ly/items/1Y060S3c2W0f321m3H1Y/enable-access-for-assistive-devices.png)
 
-# Using the Command #
+## Using the Command
 
 When your program is paused on a breakpoint in lldb, calling the command:
 
@@ -30,14 +30,17 @@ When your program is paused on a breakpoint in lldb, calling the command:
 
 will ask the object for its `quickLookDebugData` and save that data to the object's `quickLookFilename`. The file will be saved under `/tmp/<target>` and opened using Finder + Quick Look. You can make any object into a Quick Look data provider by simply implementing the `quickLookDebugData` and `quickLookFilename` methods. Simple implementations of data providers for `NSObject`, `UIImage`, `UIView`, `NSData`, and `NSString` can be found in the `DataProviders` directory.
 
-# Examples #
+## Examples
 
-quicklook self.imageView.image
-ql [[UIApplication sharedApplication] keyWindow]
-quicklook -f some_object.json -- [self jsonString]
-ql -l self.view
+`quicklook self.imageView.image`
 
-# Some use cases #
+`ql [[UIApplication sharedApplication] keyWindow]`
+
+`quicklook -f some_object.json -- [self jsonString]`
+
+`ql -l self.view`
+
+## Some use cases
 
 Debugging images not accessible from the Xcode GUI.
 Debugging views that are not on screen or obscured by another view.
@@ -46,6 +49,6 @@ Opening text in a proper editor without having to copy/paste from the console.
 
 Tip: type `help quicklook` from the lldb prompt to see the options for the command.
 
-# About #
+## About
 
 `quicklook` uses lldb's powerful (but poorly documented) python scripting bridge. I don't typically write in python, so apologies if I've mixed in some objective-c style conventions. If you have any ideas, comments, or feedback, I'm [@ryanolsonk](http://twitter.com/ryanolsonk) on twitter, and pull requests are welcome!
