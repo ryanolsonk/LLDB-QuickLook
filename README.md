@@ -32,20 +32,20 @@ will ask the object for its `quickLookDebugData` and save that data to the objec
 
 ## Examples
 
-`quicklook self.imageView.image`
+`(lldb) quicklook self.imageView.image`
 
-`ql [[UIApplication sharedApplication] keyWindow]`
+`(lldb) ql [[UIApplication sharedApplication] keyWindow]`
 
-`quicklook -f some_object.json -- [self jsonString]`
+`(lldb) quicklook -f some_object.json -- [self jsonString]`
 
-`ql -l self.view`
+`(lldb) ql -l self.view`
 
 ## Some use cases
 
-Debugging images not accessible from the Xcode GUI.
-Debugging views that are not on screen or obscured by another view.
-Saving images for screenshots or to watch a view change over time.
-Opening text in a proper editor without having to copy/paste from the console.
+* Debugging images not accessible from the Xcode GUI.
+* Debugging views that are not on screen or obscured by another view.
+* Saving images for screenshots or to watch a view change over time.
+* Opening text in a proper editor without having to copy/paste from the console.
 
 Tip: type `help quicklook` from the lldb prompt to see the options for the command.
 
