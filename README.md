@@ -17,7 +17,7 @@ The command is quite simple. It asks an object in your program for debug data, s
 1. Clone the repository.
 2. Copy the `.lldbinit` file to your home directory (or append the lines to your existing `.lldbinit`).
 3. Update the path to `lldb_quick_look.py` in the `.lldbinit` file to match the script's location on your machine.
-4. Add the `DataProviders` directory to your Xcode project.
+4. Add the `DataProviders` directory to your Xcode project. **LLDB-QuickLook requires Xcode 5 or later.**
 5. To use the full version of quick look, ensure that "Enable access for assistive devices" setting is checked in System Preferences.
 
 ![Enable access for assistive devices](http://f.cl.ly/items/1Y060S3c2W0f321m3H1Y/enable-access-for-assistive-devices.png)
