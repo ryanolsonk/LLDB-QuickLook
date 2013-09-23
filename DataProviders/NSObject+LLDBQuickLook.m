@@ -41,9 +41,9 @@
 // NSObject subclasses can use this base implementation, but should at least append an appropriate file extension.
 - (NSString *)quickLookDebugFilename
 {
-    // By putting this into an NSUInteger, we might loose the most significant digits.
-    // That's ok, we're really just care about a reasonably unique string for the filename.
-    NSUInteger timestampInMilliseconds = (NSUInteger)([NSDate timeIntervalSinceReferenceDate] * 1000);
+    // By putting this into an unsigned int, we might loose the most significant digits.
+    // That's ok, we really just care about a reasonably unique string for the filename.
+    unsigned int timestampInMilliseconds = (unsigned int)([NSDate timeIntervalSinceReferenceDate] * 1000);
     NSString *className = NSStringFromClass([self class]);
     return [NSString stringWithFormat:@"%@_%u", className, timestampInMilliseconds];
 }
