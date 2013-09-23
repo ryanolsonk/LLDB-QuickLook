@@ -17,5 +17,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ryanolsonk/LLDB-QuickLook.git", :tag => "#{s.version}" }
   s.source_files = 'DataProviders/*.{m,h}'
   s.osx.exclude_files = 'DataProviders/UI*.{m,h}'
+  s.framework    = 'QuartzCore'
   s.requires_arc = true
 end
