@@ -1,6 +1,8 @@
+= 0.1.1 (2013-09-22)
+  * Warning and error fixes to pass cocoapods validation
+
 = 0.1 (2013-09-22)
 
   * Add podspec (@gfontenot)
 
   * Initial version of tool
-  
