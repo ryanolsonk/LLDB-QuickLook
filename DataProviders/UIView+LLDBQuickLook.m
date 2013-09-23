@@ -28,6 +28,7 @@
 
 #import "UIView+LLDBQuickLook.h"
 #import "NSObject+LLDBQuickLook.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (LLDBQuickLook)
 
