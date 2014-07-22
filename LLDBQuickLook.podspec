@@ -15,8 +15,9 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = 'Ryan Olson'
   s.source       = { :git => "https://github.com/ryanolsonk/LLDB-QuickLook.git", :tag => "#{s.version}" }
-  s.source_files = 'DataProviders/*.{m,h}'
-  s.osx.exclude_files = 'DataProviders/UI*.{m,h}'
+  s.source_files = 'DataProviders/**/*.{m,h}'
+  s.ios.exclude_files = 'DataProviders/AppKit/*.{m,h}'
+  s.osx.exclude_files = 'DataProviders/UIKit/*.{m,h}'
   s.framework    = 'QuartzCore'
   s.requires_arc = true
 end
